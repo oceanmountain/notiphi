@@ -1,0 +1,112 @@
+.rounded (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+.notification {
+	padding: 5px 13px 5px 42px;
+	margin: 5px 0;
+	.rounded(4px);
+	font-family: "Chaparral Pro", Chaparral, Georgia;*
+	color: black;
+	.notiphIcon {
+		display: block;
+		height: 30px;
+		width: 30px;
+		float: left;
+		margin-left: -33px;
+		background-image: url("images/notiphIcons.png");
+		background-repeat: no-repeat;
+	}
+	.notiphiTitle {
+		font-size: 1em;
+		margin: 5px 0 2px;
+		margin: 0 3px;
+	}
+	.notiphiMessage {
+		margin: 0 3px;
+		display: block;
+	}
+	.notiphiActions {
+		padding: 8px 0 5px;
+		.notiphiAction {
+			display: inline-block;
+			padding: 3px 5px;
+			margin: 13 5px;
+			cursor: pointer;
+			.rounded(3px);
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	//Color setup
+	&.notiphi {
+	background-color: #d1e4f3;
+	border: 1px solid #4d8fcb;
+		.notiphIcon {
+			background-position-y: -90px;
+		}
+		.notiphiActions {
+			.notiphiAction {
+				background: #72a4dc;
+				border: 1px solid #2f7ac0;
+				&:hover {
+					background: #3d8ee8;
+					border: 1px solid #025cb0;
+				}
+			}
+		}
+	}
+	&.warning {
+	background-color: #ffedb8;
+	border: 1px solid #fab418;
+		.notiphIcon {
+			background-position-y: -60px;
+		}
+		.notiphiActions {
+			.notiphiAction {
+				background: rgba(255,192,0,0.5);
+				border: 1px solid rgba(255,192,0,0.6);
+				&:hover {
+					background: rgba(255,144,0,0.4);
+					border: 1px solid rgba(255,144,0,0.6);
+				}
+			}
+		}
+	}
+	&.error {
+	background-color: #fccac1;
+	border: 1px solid #eb5439;
+		.notiphiActions {
+			.notiphiAction {
+				background: #f18f7e;
+				border: 1px solid #e0462a;
+				&:hover {
+					background: #ee6048;
+					border: 1px solid #ce2405;
+				}
+			}
+		}
+	}
+	&.success {
+	background-color: #effeb9;
+	border: 1px solid #98c700;
+		.notiphIcon {
+			background-position-y: -30px;
+		}
+		.notiphiActions {
+			.notiphiAction {
+				background: #82d84e;
+				border: 1px solid #61ba2b;
+				&:hover {
+					background: #4ac02a;
+					border: 1px solid #2eb809;
+				}
+			}
+		}
+	}
+}
